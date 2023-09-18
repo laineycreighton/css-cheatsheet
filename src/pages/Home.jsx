@@ -1,37 +1,29 @@
 //----- IMPORTS -----//
-import '../styles/Home.css';
+import '../assets/css/Home.css';
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 //----- EXPORTS -----//
 export default function Dev() {
     return (
-        <div className='contact'>
+        <div>
+            <Header />
             <div>
-                <h4>Contact Me</h4>
-            </div>
-            <form className='contact-form' >
-                <div className='form-styling'>
-                    <div className='name'>
-                        <label>Name:</label>
-                        <input
-                            type="text"
-                        />
-                    </div>
-                    <div className='email'>
-                        <label>Email:</label>
-                        <input
-                            type="email"
-                            name="email"
-                        />
-                    </div>
-                    <div className='message'>
-                        <label>Message:</label>
-                        <textarea
-                            name="message"
-                        />
-                    </div>
-                    <button className='submit' type="submit">Submit</button>
+                <div className='colors'>
+                    <h1>Hello</h1>
                 </div>
-            </form>
+                <div className='fonts'>
+
+                </div>
+                <div className='flexbox'>
+
+                </div>
+                <div className='grid'>
+
+                </div>
+            </div>
+            <Footer />
         </div>
     )
 }

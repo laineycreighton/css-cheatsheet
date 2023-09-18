@@ -1,17 +1,15 @@
 //----- IMPORTS -----//
 import { Outlet } from "react-router-dom";
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import 'normalize.css'
+import './App.css';
 
 //----- EXPORTS -----//
 function App() {
 
   return (
-    <div>
-      <Header />
+    <div className="main">
       <Outlet />
-      <Footer />
     </div>
   )
 }

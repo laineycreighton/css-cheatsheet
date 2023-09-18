@@ -1,15 +1,13 @@
 //----- IMPORTS -----//
-import { Link } from 'react-router-dom'
-import './styles/Header.css'
+import { Link } from 'react-router-dom';
+import '../assets/css/Header.css';
 
 //----- EXPORTS -----//
 export default function Header() {
     return (
-        <div className='header'>
+        <div className='main-header'>
             <nav className="nav-bar">
-                <div>
-                    <Link to="/dev">Developer</Link>
-                </div>
+                <Link className='developer-link' to="/dev">Developer</Link>
             </nav>
             <header>
                 <h1>CSS Cheatsheet</h1>

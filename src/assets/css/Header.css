@@ -1,0 +1,66 @@
+/*----- COLORS -----*/
+:root {
+  --background: #EEEDE7;
+  --accent: #D75338;
+  --dark: #3C3C32;
+}
+
+/*----- FONTS -----*/
+@font-face {
+  font-family: mooli;
+  src: url('../fonts/Mooli-Regular.ttf');
+}
+
+@font-face {
+  font-family: archivo;
+  src: url('../fonts/ArchivoBlack-Regular.ttf');
+}
+
+/*----- HEADER -----*/
+.nav-bar {
+  /* outline: blue dashed 3px; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+
+.developer-link {
+    /* outline: red dashed 3px; */
+    font-family: archivo;
+    font-size: 20px;
+    color: var(--dark);
+    border: var(--accent) solid 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 20px 30px 0 0;
+    padding: 3px;
+}
+
+header {
+  /* outline: green dashed 3px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  width: 100%;
+}
+
+h1 {
+  /* outline: red dashed 3px; */
+  font-family: archivo;
+  font-size: 50px;
+  color: var(--accent);
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+header p {
+  /* outline: blue dashed 3px; */
+  font-size: 17px;
+  text-align: center;
+  margin: 5px 0 25px 0;
+  width: 60%;
+}

@@ -1,0 +1,17 @@
+/*----- COLORS -----*/
+:root {
+    --background: #EEEDE7;
+    --accent: #D75338;
+    --dark: #3C3C32;
+}
+
+/*----- FONTS -----*/
+@font-face {
+    font-family: mooli;
+    src: url('./assets/fonts/Mooli-Regular.ttf');
+}
+
+/*----- FONTS -----*/
+.main {
+    height: 100vh;
+}

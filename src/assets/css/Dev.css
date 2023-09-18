@@ -1,0 +1,87 @@
+/*----- COLORS -----*/
+:root {
+  --background: #EEEDE7;
+  --accent: #D75338;
+  --dark: #3C3C32;
+}
+
+/*----- FONTS -----*/
+@font-face {
+  font-family: mooli;
+  src: url('../fonts/Mooli-Regular.ttf');
+}
+
+@font-face {
+  font-family: archivo;
+  src: url('../fonts/ArchivoBlack-Regular.ttf');
+}
+
+/*----- BACK -----*/
+.dev-page {
+  height: 100vh;
+}
+
+.back {
+  /* outline: blue dashed 3px; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+
+.back-link {
+  /* outline: red dashed 3px; */
+  font-family: archivo;
+  font-size: 20px;
+  color: var(--dark);
+  border: var(--accent) solid 2px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px 30px 0 0;
+  padding: 3px;
+}
+
+/*----- HEADER -----*/
+.dev-header {
+  /* outline: green dashed 3px; */
+  font-family: archivo;
+  font-size: 40px;
+  color: var(--accent);
+  text-align: center;
+  margin: 0;
+}
+
+/*----- BODY -----*/
+.dev {
+  /* outline: purple dashed 3px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  /* outline: blue dashed 3px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  width: 75%;
+}
+
+.contact {
+  /* outline: green dashed 3px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  margin: 30px;
+}
+
+.contact a img {
+  /* outline: red dashed 3px; */
+  width: 35px;
+}
