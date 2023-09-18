@@ -1,5 +1,20 @@
+/*----- COLORS -----*/
+:root {
+--background: #EEEDE7;
+--accent: #D75338;
+--dark: #3C3C32;
+}
+
+/*----- FONTS -----*/
+@font-face {
+  font-family: mooli;
+  src: url('./assets/fonts/Mooli-Regular.ttf');
+}
+
 /*----- ROOT -----*/
 html, body {
+  background-color: var(--background);
+  font-family: mooli;
   padding: 0;
   margin: 0;
   height: 100%;
