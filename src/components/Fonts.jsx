@@ -1,21 +1,25 @@
 //----- IMPORTS -----//
 import React, { useState } from 'react';
 
+//CSS
 import '../assets/css/Cards.css';
 
 //----- EXPORTS -----//
 export default function Colors() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    //Example Div
     const selectorOpen = 'p {';
     const selectorClosed = '};';
     const fontFaceOpen = '@font-face {';
     const fontFaceFF = 'font-family: yourfontname;';
     const fontfaceSRC = 'src: url("filepath")';
 
+    //Example CSS
     const ffamCode = `font-family: "Times New Roman";`;
     const tcCode = `font-family: yourfontname;`;
 
+    //Font Cards
     const fontCSS = [
         {
             title: 'Fonts',
@@ -61,6 +65,7 @@ export default function Colors() {
         },
     ];
 
+    //Handles the Carousel Slides
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % fontCSS.length);
     };
@@ -71,25 +76,37 @@ export default function Colors() {
         );
     };
 
+    //Displays the Carousel Slide
     const currentFont = fontCSS[currentIndex];
 
+    //Return
     return (
+        //---------- CAROUSEL ----------//
         <div className="css-carousel">
+            {/*-- Left Button --*/}
             <div className="carousel-buttons">
                 <button onClick={prevSlide}> ← </button>
             </div>
+
+            {/* Title */}
             <div className='css-card'>
                 <div className="css-header">
                     <h3>{currentFont.title}</h3>
                 </div>
+
+                {/* Details */}
                 <div className="css-details">
                     <p>{currentFont.description}</p>
                     <button><a href={currentFont.docs} target='_blank'>Docs</a></button>
                 </div>
+
+                {/* Code Example */}
                 <div className='css-code'>
                     {currentFont.font}
                 </div>
             </div>
+
+            {/*-- Right Button --*/}
             <div className="carousel-buttons">
                 <button onClick={nextSlide}>→</button>
             </div>

@@ -5,6 +5,7 @@ import App from './App.jsx'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+//Pages
 import Home from './pages/Home.jsx';
 import Dev from './pages/Dev.jsx';
 

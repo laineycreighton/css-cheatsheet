@@ -1,19 +1,23 @@
 //----- IMPORTS -----//
 import React, { useState } from 'react';
 
+//CSS
 import '../assets/css/Cards.css';
 
 //----- EXPORTS -----//
 export default function Colors() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    //Example Div
     const selectorOpen = 'div {'
     const selectorClosed = '};'
 
+    //Example CSS
     const bgcCode = `background-color: red;`;
     const tcCode = `color: red;`;
     const bcCode = `border: red solid 5px;`;
 
+    //Color Cards
     const colorCSS = [
         {
             title: 'Colors',
@@ -28,21 +32,21 @@ export default function Colors() {
             css: <div>
                 {selectorOpen}
                 <br></br>
-                    {bgcCode}
+                {bgcCode}
                 <br></br>
                 {selectorClosed}
-                </div>,
+            </div>,
         },
         {
             title: 'Text Color',
             description: 'Use this property to set a text color. You can use a color name, hex code, or rgb code.',
             docs: 'https://www.w3schools.com/css/css_text.asp',
             css: <div>
-            {selectorOpen}
-            <br></br>
+                {selectorOpen}
+                <br></br>
                 {tcCode}
-            <br></br>
-            {selectorClosed}
+                <br></br>
+                {selectorClosed}
             </div>,
         },
         {
@@ -50,15 +54,16 @@ export default function Colors() {
             description: 'Use this property to set a border color for an element. You can use a color name, hex code, or rgb code.',
             docs: 'https://www.w3schools.com/css/css_border_color.asp',
             css: <div>
-            {selectorOpen}
-            <br></br>
+                {selectorOpen}
+                <br></br>
                 {bcCode}
-            <br></br>
-            {selectorClosed}
+                <br></br>
+                {selectorClosed}
             </div>,
         },
     ];
 
+    //Handles the Carousel Slides
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % colorCSS.length);
     };
@@ -69,27 +74,41 @@ export default function Colors() {
         );
     };
 
+    //Displays the Carousel Slide
     const currentColor = colorCSS[currentIndex];
 
+    //Return
     return (
+        //---------- CAROUSEL ----------//
         <div className="css-carousel">
+            {/*-- Left Button --*/}
             <div className="carousel-buttons">
                 <button onClick={prevSlide}> ← </button>
             </div>
+
+            {/*----- Displayed Slide ---*/}
             <div className='css-card'>
+
+                {/* Title */}
                 <div className="css-header">
                     <h3>{currentColor.title}</h3>
                 </div>
+
+                {/* Details */}
                 <div className="css-details">
                     <p>{currentColor.description}</p>
                     <button><a href={currentColor.docs} target='_blank'>Docs</a></button>
                 </div>
+
+                {/* Code Example */}
                 <div className='css-code'>
                     <div>
                         {currentColor.css}
                     </div>
                 </div>
             </div>
+
+            {/*-- Right Button --*/}
             <div className="carousel-buttons">
                 <button onClick={nextSlide}>→</button>
             </div>

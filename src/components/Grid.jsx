@@ -1,22 +1,25 @@
 //----- IMPORTS -----//
 import React, { useState } from 'react';
 
+//CSS
 import '../assets/css/Cards.css';
 
 //----- EXPORTS -----//
 export default function Colors() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-
+//Example Div
     const selectorOpen = 'div {'
     const selectorGrid = 'display: grid;'
     const selectorClosed = '};'
 
+    //Example CSS
     const gap = `gap: 15px 10px;`;
     const justifyItems = 'justify-items: center;';
     const alignItems = 'align-items: start;';
     const placeItems = 'place-items: center;';
 
+    //Font Cards
     const fontCSS = [
         {
             title: 'Grid',
@@ -94,6 +97,7 @@ export default function Colors() {
         },
     ];
 
+    //Handles the Carousel Slides
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % fontCSS.length);
     };
@@ -104,25 +108,39 @@ export default function Colors() {
         );
     };
 
+    //Displays the Carousel Slide
     const currentFont = fontCSS[currentIndex];
 
+    //Return
     return (
+        //---------- CAROUSEL ----------//
         <div className="css-carousel">
+            {/*-- Left Button --*/}
             <div className="carousel-buttons">
                 <button onClick={prevSlide}> ← </button>
             </div>
+
+            {/*----- Displayed Slide ---*/}
             <div className='css-card'>
+
+                {/* Title */}
                 <div className="css-header">
                     <h3>{currentFont.title}</h3>
                 </div>
+
+                {/* Details */}
                 <div className="css-details">
                     <p>{currentFont.description}</p>
                     <button><a href={currentFont.docs} target='_blank'>Docs</a></button>
                 </div>
+
+                {/* Code Example */}
                 <div className='css-code'>
                     {currentFont.grid}
                 </div>
             </div>
+
+            {/*-- Right Button --*/}
             <div className="carousel-buttons">
                 <button onClick={nextSlide}>→</button>
             </div>

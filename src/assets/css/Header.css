@@ -37,6 +37,7 @@
     padding: 3px;
 }
 
+/*----- TITLE -----*/
 header {
   /* outline: green dashed 3px; */
   display: flex;
@@ -57,6 +58,7 @@ h1 {
   width: 100%;
 }
 
+/*----- INTRO -----*/
 header p {
   /* outline: blue dashed 3px; */
   font-size: 17px;

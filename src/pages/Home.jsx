@@ -1,6 +1,9 @@
 //----- IMPORTS -----//
+
+//CSS
 import '../assets/css/Home.css';
 
+//Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -11,9 +14,16 @@ import Grid from '../components/Grid';
 
 //----- EXPORTS -----//
 export default function Dev() {
+
+    //Return
     return (
+        //---------- BODY ----------//
         <div className='app-body'>
+
+            {/* Header */}
             <Header />
+
+            {/* Cards */}
             <div className='cheatsheet-body'>
                 <div className='css-container'>
                     <div className='colors'>
@@ -30,6 +40,8 @@ export default function Dev() {
                     </div>
                 </div>
             </div>
+
+            {/* Footer */}
             <Footer />
         </div>
     )
