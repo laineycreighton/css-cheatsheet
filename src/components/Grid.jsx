@@ -1,7 +1,7 @@
 //----- IMPORTS -----//
 import React, { useState } from 'react';
 
-import '../assets/css/Fonts.css';
+import '../assets/css/Cards.css';
 
 //----- EXPORTS -----//
 export default function Colors() {

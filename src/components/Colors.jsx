@@ -1,7 +1,7 @@
 //----- IMPORTS -----//
 import React, { useState } from 'react';
 
-import '../assets/css/Colors.css';
+import '../assets/css/Cards.css';
 
 //----- EXPORTS -----//
 export default function Colors() {
@@ -17,7 +17,7 @@ export default function Colors() {
     const colorCSS = [
         {
             title: 'Colors',
-            description: "Swipe through this say to see different ways you can implement color into your styling.",
+            description: "Click through the slides to see different ways you can implement color into your styling.",
             docs: 'https://www.w3schools.com/cssref/css_colors.php',
             css: 'Colors',
         },

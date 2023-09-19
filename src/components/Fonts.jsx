@@ -1,47 +1,62 @@
 //----- IMPORTS -----//
 import React, { useState } from 'react';
 
-import '../assets/css/Fonts.css';
+import '../assets/css/Cards.css';
 
 //----- EXPORTS -----//
 export default function Colors() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const selectorOpen = 'div {'
-    const selectorClosed = '};'
+    const selectorOpen = 'p {';
+    const selectorClosed = '};';
+    const fontFaceOpen = '@font-face {';
+    const fontFaceFF = 'font-family: yourfontname;';
+    const fontfaceSRC = 'src: url("filepath")';
 
-    const bgcCode = `background-color: red;`;
-    const tcCode = `color: red;`;
+    const ffamCode = `font-family: "Times New Roman";`;
+    const tcCode = `font-family: yourfontname;`;
 
     const fontCSS = [
         {
             title: 'Fonts',
-            description: "Swipe through this say to see different ways you can implement color into your styling.",
-            docs: 'https://www.w3schools.com/cssref/css_colors.php',
+            description: "Click through the slides to see different ways you can implement different fonts into your styling.",
+            docs: 'https://developer.mozilla.org/en-US/docs/Web/CSS/font',
             font: 'Fonts',
         },
         {
             title: 'Font Family',
-            description: "Use this property to set an element's background color.",
-            docs: 'https://www.w3schools.com/css/css_background.asp',
+            description: "Use this property to set a font style for an element.",
+            docs: 'https://www.w3schools.com/cssref/pr_font_font-family.php',
             font: <div>
                 {selectorOpen}
                 <br></br>
-                {bgcCode}
+                {ffamCode}
                 <br></br>
                 {selectorClosed}
             </div>,
         },
         {
             title: 'Font Face',
-            description: 'Use this property to set a text color.',
-            docs: 'https://www.w3schools.com/css/css_text.asp',
+            description: 'Use this property to set a font style using your own font either from a website or a file.',
+            docs: 'https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face',
             font: <div>
-                {selectorOpen}
+                <div>
+                    {fontFaceOpen}
+                    <br></br>
+                    {fontFaceFF}
+                    <br></br>
+                    {fontfaceSRC}
+                    <br></br>
+                    {selectorClosed}
+                </div>
                 <br></br>
-                {tcCode}
-                <br></br>
-                {selectorClosed}
+                <div>
+                    {selectorOpen}
+                    <br></br>
+                    {tcCode}
+                    <br></br>
+                    {selectorClosed}
+                </div>
             </div>,
         },
     ];

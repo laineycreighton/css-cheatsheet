@@ -35,7 +35,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 95%;
 }
 
 .colors,
@@ -44,6 +44,6 @@
 .grid {
   /* outline: blue dashed 3px; */
   margin: 30px;
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 350px;
 }
