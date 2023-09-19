@@ -19,7 +19,7 @@ export default function Colors() {
     const fontCSS = [
         {
             title: 'Flexbox',
-            description: "Swipe through this say to see different ways you can implement flexbox for styling your layout.",
+            description: "Click through these slides to see different ways you can implement flexbox for styling your layout.",
             docs: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/',
             flex: 'Flexbox',
         },
