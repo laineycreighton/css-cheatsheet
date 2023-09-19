@@ -15,3 +15,34 @@
   font-family: archivo;
   src: url('../fonts/ArchivoBlack-Regular.ttf');
 }
+
+@font-face {
+  font-family: wildeo;
+  src: url('../fonts/Wildeoo-FREE.otf');
+}
+
+/*----- FOOTER -----*/
+footer {
+  /* outline: green dashed 3px; */
+  display: flex;
+  justify-content: center;
+  align-items:last baseline;
+  height: 100px;
+}
+
+.tag {
+  /* outline: blue dashed 3px; */
+  font-family: mooli;
+  font-size: 15px;
+  color: var(--dark);
+}
+
+.passion {
+  font-family: wildeo;
+  font-size: 40px;
+}
+
+.my-name {
+  text-decoration: none;
+  color: var(--dark);
+}

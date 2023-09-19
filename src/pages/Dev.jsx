@@ -24,7 +24,7 @@ export default function Dev() {
                 <div className='about'>
                     <p>Hello, I'm Lainey Creighton, a passionate developer with a current focus in JavaScript and React, where I'm honing my skills to create engaging and interactive web experiences. I'm particularly drawn to the art of web design, using CSS to craft visually appealing and user-friendly websites.</p>
                     <p>Beyond the screen, I thrive in the great outdoors. When I'm not coding, you can often find me paddle boarding, rafting, camping, hiking, and exploring the beauty of nature. I believe that just like in coding, the best adventures are the ones where you embrace the journey.</p>
-                    <p>Thank you for visiting my developer page, and feel free to connect with me for networking, collaboration, or to explore the exciting world of web development together.</p>
+                    <p className='thank-you'>Thank you for visiting my site, and feel free to connect with me for networking, collaboration, or to explore the exciting world of web development together.</p>
                 </div>
                 <div className='contact'>
                     <a href='https://github.com/laineycreighton' target='_blank'><img src={github} alt='github logo' /></a>
