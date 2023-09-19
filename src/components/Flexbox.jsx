@@ -8,89 +8,88 @@ export default function Colors() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const selectorOpen = 'div {'
+    const selectorFlex = 'display: flex;'
     const selectorClosed = '};'
 
-    const bgcCode = `background-color: red;`;
-    const colorCode = `color: red;`;
+    const directon = 'flex-direction: column;';
+    const wrap = 'flex-wrap: nowrap;'
+    const justify = `justify-content: space-evenly;`;
+    const align = `align-items: center;`;
 
     const fontCSS = [
         {
             title: 'Flexbox',
-            description: "Swipe through this say to see different ways you can implement color into your styling.",
-            docs: 'https://www.w3schools.com/cssref/css_colors.php',
-            css: 'Flexbox',
+            description: "Swipe through this say to see different ways you can implement flexbox for styling your layout.",
+            docs: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/',
+            flex: 'Flexbox',
+        },
+        {
+            title: 'Flex',
+            description: "Use this property to define a flex container.",
+            docs: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-display',
+            flex: <div>
+                {selectorOpen}
+                <br></br>
+                {selectorFlex}
+                <br></br>
+                {selectorClosed}
+            </div>,
+        },
+        {
+            title: 'Flex Direction',
+            description: "Use this property to define the direction an element's children elements should flow.",
+            docs: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex-direction',
+            flex: <div>
+            {selectorOpen}
+            <br></br>
+            {selectorFlex}
+            <br></br>
+            {directon}
+            <br></br>
+            {selectorClosed}
+        </div>,
+        },
+        {
+            title: 'Flex Wrap',
+            description: "Use this property to determine if a container's items should wrap when the element is flexing.",
+            docs: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex-wrap',
+            flex: <div>
+            {selectorOpen}
+            <br></br>
+            {selectorFlex}
+            <br></br>
+            {wrap}
+            <br></br>
+            {selectorClosed}
+        </div>,
         },
         {
             title: 'Justify Content',
-            description: "Use this property to set an element's background color.",
-            docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: <div>
-                {selectorOpen}
-                <br></br>
-                {bgcCode}
-                <br></br>
-                {selectorClosed}
-            </div>,
-        },
-        {
-            title: 'Center',
-            description: "Use this property to set an element's background color.",
-            docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: <div>
-                {selectorOpen}
-                <br></br>
-                {bgcCode}
-                <br></br>
-                {selectorClosed}
-            </div>,
-        },
-        {
-            title: 'Space Between',
-            description: "Use this property to set an element's background color.",
-            docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: <div>
-                {selectorOpen}
-                <br></br>
-                {bgcCode}
-                <br></br>
-                {selectorClosed}
-            </div>,
-        },
-        {
-            title: 'Space Around',
-            description: "Use this property to set an element's background color.",
-            docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: <div>
-                {selectorOpen}
-                <br></br>
-                {bgcCode}
-                <br></br>
-                {selectorClosed}
-            </div>,
-        },
-        {
-            title: 'Space Evenly',
-            description: "Use this property to set an element's background color.",
-            docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: <div>
-                {selectorOpen}
-                <br></br>
-                {bgcCode}
-                <br></br>
-                {selectorClosed}
-            </div>,
+            description: "Use this property to set spacing for an element's children elements.",
+            docs: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content',
+            flex: <div>
+            {selectorOpen}
+            <br></br>
+            {selectorFlex}
+            <br></br>
+            {justify}
+            <br></br>
+            {selectorClosed}
+        </div>,
         },
         {
             title: 'Align Items',
-            description: 'Use this property to set a text color.',
-            docs: 'https://www.w3schools.com/css/css_text.asp',
-            font: <div>
-                {selectorOpen}
-                <br></br>
-                {bgcCode}
-                <br></br>
-                {selectorClosed}
-            </div>,
+            description: "Use this property to set an element's background color.",
+            docs: 'https://www.w3schools.com/css/css_background.asp',
+            flex: <div>
+            {selectorOpen}
+            <br></br>
+            {selectorFlex}
+            <br></br>
+            {align}
+            <br></br>
+            {selectorClosed}
+        </div>,
         },
     ];
 
@@ -120,7 +119,7 @@ export default function Colors() {
                     <button><a href={currentFont.docs} target='_blank'>Docs</a></button>
                 </div>
                 <div className='css-code'>
-                    {currentFont.css}
+                    {currentFont.flex}
                 </div>
             </div>
             <div className="carousel-buttons">
