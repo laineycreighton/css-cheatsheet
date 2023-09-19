@@ -12,6 +12,7 @@ export default function Colors() {
 
     const bgcCode = `background-color: red;`;
     const tcCode = `color: red;`;
+    const bcCode = `border: red solid 5px;`;
 
     const colorCSS = [
         {
@@ -22,7 +23,7 @@ export default function Colors() {
         },
         {
             title: 'Background Color',
-            description: "Use this property to set an element's background color.",
+            description: "Use this property to set an element's background color. You can use a color name, hex code, or rgb code.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
             css: <div>
                 {selectorOpen}
@@ -34,12 +35,24 @@ export default function Colors() {
         },
         {
             title: 'Text Color',
-            description: 'Use this property to set a text color.',
+            description: 'Use this property to set a text color. You can use a color name, hex code, or rgb code.',
             docs: 'https://www.w3schools.com/css/css_text.asp',
             css: <div>
             {selectorOpen}
             <br></br>
                 {tcCode}
+            <br></br>
+            {selectorClosed}
+            </div>,
+        },
+        {
+            title: 'Border Color',
+            description: 'Use this property to set a border color for an element. You can use a color name, hex code, or rgb code.',
+            docs: 'https://www.w3schools.com/css/css_border_color.asp',
+            css: <div>
+            {selectorOpen}
+            <br></br>
+                {bcCode}
             <br></br>
             {selectorClosed}
             </div>,
