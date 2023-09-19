@@ -15,3 +15,35 @@
   font-family: archivo;
   src: url('../fonts/ArchivoBlack-Regular.ttf');
 }
+
+/*----- BODY -----*/
+.app-body {
+  height: 100vh;
+}
+
+.cheatsheet-body {
+  /* outline: green dashed 3px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.css-container {
+  /* outline: blue dashed 3px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.colors,
+.fonts,
+.flexbox,
+.grid {
+  /* outline: blue dashed 3px; */
+  margin: 30px;
+  width: 400px;
+  height: 300px;
+}
