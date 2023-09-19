@@ -55,7 +55,7 @@ Introducing Know CSS – your go-to resource for mastering the art of Cascading 
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory and install the required dependencies using `npm install` and `npm run build`.
-3. Launch the application with `npm run start` and access it through your preferred web browser.
+3. Launch the application with `npm run dev` and access it through your preferred web browser.
 <br>
 
 ## Deployment
