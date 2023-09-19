@@ -11,21 +11,38 @@ export default function Colors() {
     const selectorClosed = '};'
 
     const bgcCode = `background-color: red;`;
-
-    const colorCode = `color: red;`;
+    const tcCode = `color: red;`;
 
     const fontCSS = [
+        {
+            title: 'Fonts',
+            description: "Swipe through this say to see different ways you can implement color into your styling.",
+            docs: 'https://www.w3schools.com/cssref/css_colors.php',
+            font: 'Fonts',
+        },
         {
             title: 'Font Family',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: bgcCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
         {
             title: 'Font Face',
             description: 'Use this property to set a text color.',
             docs: 'https://www.w3schools.com/css/css_text.asp',
-            font: colorCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {tcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
     ];
 
@@ -55,13 +72,7 @@ export default function Colors() {
                     <button><a href={currentFont.docs} target='_blank'>Docs</a></button>
                 </div>
                 <div className='css-code'>
-                    <div>
-                        {selectorOpen}
-                        <br></br>
-                        {currentFont.font}
-                        <br></br>
-                        {selectorClosed}
-                    </div>
+                    {currentFont.font}
                 </div>
             </div>
             <div className="carousel-buttons">

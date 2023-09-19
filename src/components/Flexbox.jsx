@@ -11,45 +11,86 @@ export default function Colors() {
     const selectorClosed = '};'
 
     const bgcCode = `background-color: red;`;
-
     const colorCode = `color: red;`;
 
     const fontCSS = [
         {
+            title: 'Flexbox',
+            description: "Swipe through this say to see different ways you can implement color into your styling.",
+            docs: 'https://www.w3schools.com/cssref/css_colors.php',
+            css: 'Flexbox',
+        },
+        {
             title: 'Justify Content',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: bgcCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
         {
             title: 'Center',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: bgcCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
         {
             title: 'Space Between',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: bgcCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
         {
             title: 'Space Around',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: bgcCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
         {
             title: 'Space Evenly',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            font: bgcCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
         {
             title: 'Align Items',
             description: 'Use this property to set a text color.',
             docs: 'https://www.w3schools.com/css/css_text.asp',
-            font: colorCode,
+            font: <div>
+                {selectorOpen}
+                <br></br>
+                {bgcCode}
+                <br></br>
+                {selectorClosed}
+            </div>,
         },
     ];
 
@@ -79,13 +120,7 @@ export default function Colors() {
                     <button><a href={currentFont.docs} target='_blank'>Docs</a></button>
                 </div>
                 <div className='css-code'>
-                    <div>
-                        {selectorOpen}
-                        <br></br>
-                        {currentFont.font}
-                        <br></br>
-                        {selectorClosed}
-                    </div>
+                    {currentFont.css}
                 </div>
             </div>
             <div className="carousel-buttons">

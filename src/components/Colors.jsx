@@ -11,21 +11,38 @@ export default function Colors() {
     const selectorClosed = '};'
 
     const bgcCode = `background-color: red;`;
-
-    const colorCode = `color: red;`;
+    const tcCode = `color: red;`;
 
     const colorCSS = [
+        {
+            title: 'Colors',
+            description: "Swipe through this say to see different ways you can implement color into your styling.",
+            docs: 'https://www.w3schools.com/cssref/css_colors.php',
+            css: 'Colors',
+        },
         {
             title: 'Background Color',
             description: "Use this property to set an element's background color.",
             docs: 'https://www.w3schools.com/css/css_background.asp',
-            css: bgcCode,
+            css: <div>
+                {selectorOpen}
+                <br></br>
+                    {bgcCode}
+                <br></br>
+                {selectorClosed}
+                </div>,
         },
         {
             title: 'Text Color',
             description: 'Use this property to set a text color.',
             docs: 'https://www.w3schools.com/css/css_text.asp',
-            css: colorCode,
+            css: <div>
+            {selectorOpen}
+            <br></br>
+                {tcCode}
+            <br></br>
+            {selectorClosed}
+            </div>,
         },
     ];
 
@@ -56,11 +73,7 @@ export default function Colors() {
                 </div>
                 <div className='css-code'>
                     <div>
-                        {selectorOpen}
-                        <br></br>
                         {currentColor.css}
-                        <br></br>
-                        {selectorClosed}
                     </div>
                 </div>
             </div>
